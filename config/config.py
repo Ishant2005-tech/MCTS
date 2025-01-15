@@ -1,0 +1,7 @@
+BOARD_SIZE = 3
+RNG_SEED = 42
+X = 1
+O = -1
+EMPTY = 0
+SYMBOLS = set([EMPTY, X, O])
+SYMBOL_CHARS = {X: "X", O: "O", EMPTY: "-"}

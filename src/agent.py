@@ -49,8 +49,12 @@ class MCTS:
         # print("best_scoring_child.avg: ", best_scoring_child.avg)
         return self.select(best_scoring_child)
 
-    def expand(self):
-        pass
+    def expand(self, node: Node):
+    for action in self.board.available_moves:
+        child = Node(parent=node, action=action)
+        node.children.append(child)
+    node.is_leaf = False
+
     def simulate(self, node: Node):
         board = deepcopy(self.board)
         board.play_turn(node.action)

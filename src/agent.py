@@ -122,8 +122,8 @@ if __name__ == "__main__":
     test = MCTS(board=board)
     test.loop()
     # display_in_order(test.root)
-    return_dict = dict()
-    return_dict = display_as_tree(test.root, return_dict)
+    return_dict = display_as_tree(test.root, {})
+
     # print(return_dict)
     return_list = [0] * len(return_dict)
     for key in return_dict:
